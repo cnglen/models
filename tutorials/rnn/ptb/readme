@@ -1,0 +1,16 @@
+* ptb_raw_data:
+** Input
+   - ptb.train.txt
+   - ptb.valid.txt
+   - ptb.test.txt
+
+   每行是一个句子,与处理过，词频低的词用<unk>表示
+
+** Output
+   - train_data, valid_data, test_data, vocabulary
+
+** Desc
+   - 根据ptb.train.txt建立词典, word -> id; \n 用 <eos>代替
+     - <eos>
+     - <unk>
+   - 根据建立的词典, 将List of word 映射成 List of id
